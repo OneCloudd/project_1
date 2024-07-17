@@ -1,20 +1,13 @@
 package com.github.project1.repository.post;
 
-import com.github.project1.web.dto.Post;
-import com.github.project1.web.dto.PostBody;
+import com.github.project1.Entity.post.PostEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import java.util.Optional;
 
-public interface PostRepository {
+@Repository
+public interface PostRepository extends JpaRepository<PostEntity, Integer> {
 
-     List<Post> findAllPost();
 
-
-    List<Post> findPostByEmail(String email);
-
-    void createPost(PostBody postBody);
-
-    void deletePost(String title);
-
-    PostEntity updatePost(PostBody postBody, Integer id);
 }
