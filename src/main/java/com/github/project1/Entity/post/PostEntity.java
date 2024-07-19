@@ -29,10 +29,10 @@ public class PostEntity {
     private UserEntity user;
 
 
-    @Column(name = "title", length = 100)
+    @Column(name = "title")
     private String title;
 
-    @Column(name = "content", length = 1000)
+    @Column(name = "content")
     private String content;
 
     @Column(name = "created_at")
